@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký tham gia lễ hội - Halloween</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+      color: white;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin: 130px 0 30px 0;
+      text-shadow: 3px 3px 10px black;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: 0 auto 60px auto;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+      padding: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, select, textarea {
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      font-family: 'Jolly Lodger', cursive;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+    button {
+      padding: 12px;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #cc5200;
+    }
+    #success {
+      text-align: center;
+      color: #ffcc66;
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html">Halloween</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="gianhang.html">Gian hàng</a></li>
+      <li><a href="lienhe.html">Liên hệ</a></li>
+      <li><a href="dangky.html" class="active">Đăng ký</a></li>
+    </ul>
+    <div class="menu-icon"></div>
+  </nav>
+
+  <h1>🕸️ Đăng ký tham gia lễ hội 🎃</h1>
+
+  <div class="form-container">
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Họ và tên" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Số điện thoại" required>
+      <select id="ticket" required>
+        <option value="">-- Chọn loại vé --</option>
+        <option value="normal">🎟️ Vé thường - 50.000đ</option>
+        <option value="vip">👻 Vé VIP - 100.000đ (ưu tiên chụp ảnh & quà)</option>
+      </select>
+      <textarea id="note" placeholder="Ghi chú thêm (nếu có)"></textarea>
+      <button type="submit">Gửi đăng ký</button>
+    </form>
+    <p id="success">🎉 Cảm ơn bạn đã đăng ký! Hẹn gặp tại lễ hội Halloween! 👻</p>
+  </div>
+
+  <div id="control">
+    <button onclick="music()">Phát / Dừng nhạc</button>
+  </div>
+  <audio id="bgmusic" src="/img/halloween-kids-background-music-417482.mp3" loop></audio>
+    <script src="main.js"></script>
+
+</body>
+</html>

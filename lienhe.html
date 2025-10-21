@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liên hệ - Halloween</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+      color: white;
+      font-family: 'Creepster', cursive;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      
+    }
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 10px black;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <a href="index.html">Halloween</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="gianhang.html">Gian hàng</a></li>
+      <li><a href="lienhe.html" class="active">Liên hệ</a></li>
+      <li><a href="dangky.html">Đăng ký</a></li>
+    </ul>
+    <div class="menu-icon"></div>
+  </nav>
+
+  <h1>📧 Liên hệ với chúng tôi 🎃</h1>
+
+  <div class="contact-container">
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Tên của bạn" required>
+      <input type="email" id="email" placeholder="Email của bạn" required>
+      <textarea id="message" placeholder="Lời nhắn của bạn..." required></textarea>
+      <button type="submit">Gửi</button>
+    </form>
+    <p id="success">🎃 Cảm ơn bạn! Chúng tôi sẽ sớm liên hệ lại. 🕸️</p>
+  </div>
+
+  <div id="control">
+    <button onclick="music()">Phát / Dừng nhạc</button>
+  </div>
+  <audio id="bgmusic" src="/img/halloween-kids-background-music-417482.mp3" loop></audio>
+    <script src="main.js"></script>
+</body>
+</html>
