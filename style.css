@@ -71,6 +71,7 @@ nav ul li a:hover{
     transition: .5s;
     border-radius:5px;
     cursor: pointer;
+
 }
 .menu-icon::before,
 .menu-icon::after{
@@ -91,6 +92,7 @@ nav ul li a:hover{
 } 
 .menu-icon.active{
     background: rgba(0,0,0,.0);
+
 }
 .menu-icon.active::before{
     transform: rotate(45deg);
@@ -117,7 +119,7 @@ nav ul li a:hover{
     font-size: 8rem;
     text-transform: uppercase;
     letter-spacing: 8px;
-    color:#011f29;
+    color:#011f29
 }
 .info button{
     padding: 0.5rem 1.7rem;
@@ -144,7 +146,7 @@ nav ul li a:hover{
     transform: translate(-50%,-50%) rotate(45deg);
     background: #011f29;
     transition: 0.5s ease;
-    display: block;
+    display:blog;
     z-index: -1;
 }
 .info button:hover::before{
@@ -186,7 +188,7 @@ nav ul li a:hover{
         flex-direction: column;
         gap: 1.5rem;
         transition:.5s ease-in;
-        border-bottom:2px solid rgba(255,255,255,.2);
+        border-bottom:2px soild rbga(255,255,255,.2);
     }
     nav ul li a{
         font-size: 28px;
@@ -194,11 +196,14 @@ nav ul li a:hover{
     ul.active{
         left:0;
     }
-    .info h2{
+    .menu-icon{
+        display:block;
+    }
+    .ifor h2{
         font-size:3.2rem;
         letter-spacing:1.5px;
     }
-    .info h1{
+    .infor h1{
         font-size:7rem;
         letter-spacing:6px;
     }
@@ -243,11 +248,13 @@ nav ul li a:hover{
   100% { left: 20%; top: 10%; transform: scaleX(1); opacity: 1; }
 }
 
+
 @keyframes nhenDrop {
   0%   { left: -5%; top: -300px; opacity: 0; }
   10%  { opacity: 1; }
   100% { left: -5%; top: -15%; opacity: 1; }
 }
+
 
 .animate-laudai { animation: laudaiMove 2s ease-out forwards; }
 .animate-phuthuy { animation: phuthuyFly 4s ease-in-out forwards; }
@@ -255,22 +262,24 @@ nav ul li a:hover{
   animation: nhenDrop 0.2s linear forwards;
 }
 .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-.product {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
-  transition: transform 0.3s ease;
-}
-.products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+      transition: 
+      transform 0.3s ease;
+    }
+    .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
@@ -278,83 +287,180 @@ nav ul li a:hover{
   max-width: 1200px;
   margin: auto;
 }
-.product:hover {
-  transform: scale(1.05);
+
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .product h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .buy-btn {
+      background: #ff6600;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .buy-btn:hover {
+      background: #cc5200;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: 150px auto 50px auto;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+      margin-bottom: 50px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    input, textarea {
+      padding: 15px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      font-family: 'Jolly Lodger', cursive;
+      background-color: rgba(255,255,255,0.1);
+      color: white;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #ddd;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    button {
+      padding: 12px;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #cc5200;
+    }
+    #success {
+      text-align: center;
+      color: #ffcc66;
+      margin-top: 15px;
+      display: none;
+    }
+  
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-.product img {
+
+
+#phuthuy, #nhen, #laudai {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease-in-out;
+  max-width: 100%;
+}
+
+
+#phuthuy.show, #nhen.show, #laudai.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#phuthuy img, #nhen img, #laudai img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-.product h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-.product p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.buy-btn {
-  background: #ff6600;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-}
-.buy-btn:hover {
-  background: #cc5200;
-}
-.contact-container {
   max-width: 700px;
-  margin: 150px auto 50px auto;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
-  margin-bottom: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+
+@media (max-width: 992px) {
+  #phuthuy img, #nhen img, #laudai img {
+    max-width: 400px;
+  }
+  .info h1 {
+    font-size: 5rem;
+  }
+  .info h2 {
+    font-size: 2.5rem;
+  }
 }
-input, textarea {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  font-size: 18px;
-  font-family: 'Jolly Lodger', cursive;
-  background-color: rgba(255,255,255,0.1);
-  color: white;
+
+@media (max-width: 576px) {
+  #phuthuy img, #nhen img, #laudai img {
+    max-width: 300px;
+  }
+  .info h1 {
+    font-size: 3.5rem;
+  }
+  .info h2 {
+    font-size: 2rem;
+  }
 }
-input::placeholder, textarea::placeholder {
-  color: #ddd;
+
+#content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-button {
-  padding: 12px;
-  background-color: #ff6600;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-button:hover {
-  background-color: #cc5200;
-}
-#success {
-  text-align: center;
-  color: #ffcc66;
-  margin-top: 15px;
-  display: none;
+
+@media (max-width: 768px) {
+  #phuthuy img, #nhen img, #laudai img {
+    max-width: 350px;
+  }
+
+
+  @keyframes laudaiMove {
+    0%   { left: 50%; top: 60px; opacity: 0; transform: scale(0.8); }
+    70%  { top: 200px; left: 50%; opacity: 1; transform: scale(1.05); }
+    100% { top: 200px; left: 50%; transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes phuthuyFly {
+    0%   { left: 10%; top: 8%; opacity: 1; transform: scaleX(1); }
+    40%  { left: 70%; top: 5%; transform: scale(1.1) rotate(-10deg); }
+    80%  { left: 40%; top: 8%; transform: scaleX(-1); }
+    100% { left: 10%; top: 8%; transform: scaleX(1); opacity: 1; }
+  }
+
+  @keyframes nhenDrop {
+    0%   { left: -5%; top: -250px; opacity: 0; }
+    10%  { opacity: 1; }
+    100% { left: -5%; top: -10%; opacity: 1; }
+  }
 }
