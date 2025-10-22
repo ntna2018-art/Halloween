@@ -16,13 +16,14 @@ const nhen = document.getElementById("nhen");
 
 if (button) {
   button.addEventListener("click", () => {
-    phuthuy.style.animation = "none";
-    laudai.style.animation = "none";
-    nhen.style.animation = "none";
-    void phuthuy.offsetWidth;
-    void laudai.offsetWidth;
-    void nhen.offsetWidth;
+    
+    [phuthuy, laudai, nhen].forEach(el => {
+      el.classList.add('show');
+      el.style.animation = 'none';
+      void el.offsetWidth; 
+    });
 
+  
     laudai.style.animation = "laudaiMove 4s ease-out forwards";
     phuthuy.style.animation = "phuthuyFly 5s ease-in-out forwards";
     nhen.style.animation = "nhenDrop 4s ease-in forwards";
